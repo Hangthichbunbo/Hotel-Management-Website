@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoi Global Hotel</title>
+    <link href="/Fonts/fonts/themify-icons/themify-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/customer/styles/Service.css">
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.service-item');
+
+        function scrollToTarget() {
+            const id = this.getAttribute('data-target');
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        items.forEach(item => {
+            item.addEventListener('click', scrollToTarget);
+            item.addEventListener('mouseup', scrollToTarget);
+        });
+    });
+</script>
+
+<body>
+    <main>
+        <section class="service-intro_section">
+            <img src="/customer/images/service/hotel.webp" alt="hotel" id="service-image">
+            <div class="service-intro">
+                <h1>
+                    Dịch vụ & Tiện nghi
+                </h1>
+                <p>
+                    Tại Hanoi Global Hotel, chúng tôi cam kết mang đến cho quý khách những trải nghiệm dịch vụ
+                    xuất sắc và tiện nghi hiện đại để đảm bảo kỳ nghỉ của bạn trở nên đáng nhớ và thoải mái nhất.
+                    Dưới đây là một số dịch vụ, tiện nghi nổi bật mà chúng tôi cung cấp:
+                </p>
+                <div class="service-list">
+                    <ul>
+                        <li class="service-item" data-target="restaurant">Nhà hàng tại khách sạn</li>
+                        <li class="service-item" data-target="spa">Spa và chăm sóc sức khỏe</li>
+                        <li class="service-item" data-target="gym">Phòng tập Gym hiện đại</li>
+                        <li class="service-item" data-target="pool">Hồ bơi ngoài trời</li>
+                        <li class="service-item" data-target="conference">Phòng họp và hội nghị</li>
+                        <li class="service-item" data-target="shuttle">Dịch vụ đưa đón sân bay</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-detail_section">
+            <h1 class="service-title">
+                Chi tiết
+            </h1>
+            <!-- Service List -->
+            <article class="service-article" id="restaurant">
+                <img src="/customer/images/service/restaurant.webp" alt="Restaurant" class="service-img">
+                <div class="service-content">
+                    <h2>
+                        Nhà hàng tại khách sạn
+                    </h2>
+                    <p>
+                        Nhà hàng của khách sạn mang đến không gian ấm cúng và sang trọng, là nơi lý tưởng để thưởng thức
+                        các món ăn đặc sắc từ ẩm thực Á – Âu. Với thực đơn đa dạng, nguyên liệu tươi ngon và đội ngũ đầu
+                        bếp giàu kinh nghiệm, nhà hàng cam kết mang lại cho quý khách những bữa ăn trọn vẹn hương vị.
+                        Bên cạnh đó, không gian mở thoáng đãng cùng phong cách phục vụ chuyên nghiệp chắc chắn sẽ mang
+                        đến trải nghiệm ẩm thực đáng nhớ.
+                    </p>
+                    <a href="" target="_blank" class="service-book-btn">Đặt dịch vụ</a>
+                </div>
+            </article>
+            <article class="service-article" id="spa">
+                <img src="/customer/images/service/spa.webp" alt="Spa" class="service-img">
+                <div class="service-content">
+                    <h2>
+                        Dịch vụ Spa và chăm sóc sức khỏe
+                    </h2>
+                    <p>
+                        Spa nằm trên tầng 4 khách sạn.
+                        Phương pháp trị liệu được lấy cảm hứng từ kỹ thuật truyền thống độc đáo của Nhật Bản và Việt Nam
+                        sẽ giúp bạn thư giãn tâm trí, trẻ hóa cơ thể.
+                        Với các lựa chọn phòng riêng hoặc phòng lớn, bạn có thể tận hưởng nhiều phương pháp massage và
+                        trị liệu khác nhau.
+                    </p>
+                    <a href="" target="_blank" class="service-book-btn">Đặt dịch vụ</a>
+                </div>
+            </article>
+            <article class="service-article" id="gym">
+                <img src="/customer/images/service/gym.webp" alt="Gym" class="service-img">
+                <div class="service-content">
+                    <h2>
+                        Phòng tập Gym hiện đại
+                    </h2>
+                    <p>
+                        Bạn có thể duy trì các chương trình tập luyện cá nhân ngay cả khi nghỉ tại khách sạn với Trung
+                        tâm Sức khỏe được trang bị đầy đủ các loại máy tập như​ máy chạy bộ, máy đạp xe, tập tạ tay...​
+                        và các thiết bị hiện đại khác. Nằm trên tầng 4, Trung tâm Sức khỏe còn bao gồm bể bơi lớn ngoài
+                        trời và bể sục để đảm bảo một trải nghiệm thoải mái, thư giãn nhất dành cho bất kỳ vị khách nào.
+                    </p>
+                </div>
+            </article>
+            <article class="service-article" id="pool">
+                <img src="/customer/images/service/pool.webp" alt="Pool">
+                <div class="service-content">
+                    <h2>
+                        Hồ bơi ngoài trời
+                    </h2>
+                    <p>
+                        Hồ bơi ngoài trời của khách sạn được thiết kế hiện đại, rộng rãi và bao quanh bởi khu vườn xanh
+                        mát, mang đến không gian thư giãn lý tưởng cho du khách. Tại đây, quý khách có thể thỏa sức bơi
+                        lội, tận hưởng ánh nắng nhẹ buổi sớm hoặc thư giãn bên ly cocktail mát lạnh. Khu vực hồ bơi còn
+                        được trang bị ghế nghỉ, dù che và dịch vụ khăn tắm miễn phí, mang đến trải nghiệm thoải mái và
+                        trọn vẹn nhất.
+                    </p>
+                </div>
+            </article>
+            <article class="service-article" id="conference">
+                <img src="/customer/images/service/conference.webp" alt="Conference" class="service-img">
+                <div class="service-content">
+                    <h2>
+                        Phòng họp và hội nghị
+                    </h2>
+                    <p>
+                        Phòng họp và hội nghị của khách sạn được trang bị hiện đại, không gian sang trọng và linh hoạt,
+                        phù hợp cho các buổi họp, hội thảo hay sự kiện quan trọng. Với hệ thống âm thanh – ánh sáng chất
+                        lượng cao, màn hình trình chiếu và dịch vụ hỗ trợ chuyên nghiệp, chúng tôi cam kết mang đến trải
+                        nghiệm tổ chức sự kiện hoàn hảo, tiện nghi và đẳng cấp cho mọi đối tác và doanh nghiệp.
+                    </p>
+                    <a href="" target="_blank" class="service-book-btn" link>Đặt dịch vụ</a>
+                </div>
+            </article>
+            <article class="service-article" id="shuttle">
+                <img src="/customer/images/service/shuttle.webp" alt="Shuttle" class="service-img">
+                <div class="service-content">
+                    <h2>
+                        Dịch vụ đưa đón sân bay
+                    </h2>
+                    <p>
+                        Dịch vụ đưa đón sân bay của khách sạn mang đến sự tiện lợi và thoải mái cho quý khách trong mỗi
+                        chuyến đi. Với đội xe hiện đại, lái xe chuyên nghiệp và đúng giờ, chúng tôi đảm bảo hành trình
+                        di chuyển giữa sân bay và khách sạn luôn an toàn, nhanh chóng và dễ chịu. Quý khách có thể đặt
+                        trước dịch vụ để được đón tiếp chu đáo ngay khi vừa hạ cánh.
+                    </p>
+                    <a href="" target="_blank" class="service-book-btn">Đặt dịch vụ</a>
+                </div>
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
+    header img{
+        margin: auto;
+    }
+
+}
+
+body{ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: #f4f4f4; 
+    margin: 0; 
+    background-image: url("./img/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+header { 
+    background-color:  #3f72af; 
+    color: #fff; 
+    padding: 8px; 
+    display: flex;
+    min-height: 100px;
+}
+
+header img{
+    height: 100px;
+    width: auto;
+    margin: auto;
+    margin-left: 0;
+}
+header div{
+    display: flex;
+    margin: auto;
+    margin-right: 10px;
+}
+
+header div h1{
+    margin: auto;
+    margin-right: 40px;
+    color: black;
+}
+header div form {
+    margin: auto 10px;
+    
+}
+header div form button{
+    background-color: plum;
+    padding: 5px 20px; 
+    font-size: 20px; 
+    font-weight: bold;
+    border: none; 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 12px;
+    height: auto;
+    min-height: 40px;
+}
+header div form button:hover{
+    background-color: red;
+}
+
+nav { 
+    padding: 10px; 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+}
+nav button { 
+    padding: 10px; 
+    border: none; 
+    background: #007bff; 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 12px; 
+}
+nav button.active { 
+    background: #1dad6a; 
+}
+nav button:hover{
+    background-color: #3f72af;
+}
+
+.hidden { 
+    display: none; 
+}
+section { 
+    max-width: 900px; 
+    min-width: 320px;
+    margin: 30px auto;
+    margin-top: 15px; 
+    background: rgba(255, 255, 255, 0.9) ; 
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px #ccc; 
+}
+section h2 { 
+    color: #007bff; 
+    margin-left: 10px;
+}
+.service-confirm {
+    display: flex;
+}
+.service-confirm nav{
+    margin: auto;
+    justify-content: center;
+    margin-right: 10px;
+}
+.service-confirm nav button{
+    padding: 10px 20px; 
+    border: none; 
+    background: #007bff; 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 12px;
+    margin: 5px;
+    margin-right: 0; 
+}
+.service-confirm nav button:hover{
+    background-color: #3f72af;
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px; 
+}
+
+tr{
+    height: 43px;
+}
+.room-status td:nth-child(3){
+    width: 120px;
+
+}
+.room-status td:nth-child(4){
+    width: 120px;
+}
+
+.room-booking td:nth-child(5){
+    width: 120px;
+}
+
+.restaurant td:nth-child(4){
+    width: 120px;
+}
+
+.spa td:nth-child(4){
+    width: 120px;
+}
+
+.car-service td:nth-child(5){
+    width: 120px;
+}
+
+td { 
+    
+    border: 1px solid #ddd; 
+    padding: 0px; 
+    text-align: center; 
+}
+table tr td button{
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.actions button { 
+    margin-right: 5px; 
+}
+.save{
+    display:flex;
+}
+.save button{
+    font-size: 15px;
+    height: 40px;
+    padding: 10px 20px; 
+    margin: auto;
+    margin-right: 20px;
+    border: none; 
+    background: #007bff; 
+    color: #fff; 
+    cursor: pointer; 
+    border-radius: 12px;
+}
+.save button:hover{
+    background-color: #3f72af;
+}
+
+footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: #3f72af;
+}
+footer p{
+    margin: 5px;
+}

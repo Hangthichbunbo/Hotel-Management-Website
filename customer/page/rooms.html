@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phòng nghỉ & Tìm phòng</title>
+  <link href="/Fonts/fonts/themify-icons/themify-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/customer/styles/room.css" />
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="home.html">
+      <div class="header__logo">
+        <img class="" src="/customer/images/logo.png" alt="" />
+      </div>
+    </a>
+
+    <div class="header__menu">
+      <ul class="header__nav">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="/customer/page/rooms.html">Phòng nghỉ</a></li>
+        <li><a href="/customer/page/Service.html">Tiện nghi & Dịch vụ</a></li>
+      </ul>
+      <div class="header__book-room btn">
+        <a href="/customer/page/forms/book_a_room.html">Đặt phòng ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="rooms-hero">
+    <section class="rooms-card" aria-labelledby="rooms-card-title">
+      <h2 id="rooms-card-title" class="rooms-card__title">PHÒNG NGHỈ</h2>
+
+      <p class="rooms-card__text">
+        Hanoi Global Hotel cung cấp 255 phòng nghỉ. Tất cả các phòng đều có tầm nhìn đẹp hướng ra thành phố hoặc công
+        viên Thống Nhất.
+      </p>
+      <p class="rooms-card__text">
+        Hanoi Global Hotel tự hào là khách sạn 5 sao đầu tiên có các tiện nghi chất lượng Nhật Bản như bồn vệ sinh tự
+        động hiện đại trang bị tại tất cả các phòng.
+      </p>
+      <p class="rooms-card__text">
+        Khách lưu trú tại phòng Executive và các hạng phòng cao hơn sẽ được tận hưởng dịch vụ tại Executive Lounge nằm
+        trên tầng cao nhất của khách sạn.
+      </p>
+      <p class="rooms-card__text">
+        Chúng tôi sẽ đảm bảo rằng bạn có một kỳ nghỉ thoải mái và dễ chịu nhất.
+      </p>
+
+      <button class="btn btn--primary rooms-card__btn">ĐẶT PHÒNG</button>
+    </section>
+  </main>
+
+  <div class="section-divider"></div>
+  <h2 class="search-title">TÌM PHÒNG</h2>
+
+  <section class="rooms" aria-label="Lọc phòng và kết quả">
+    <aside class="filter" aria-label="Yếu tố để lọc">
+      <h3 class="filter__title">YẾU TỐ ĐỂ LỌC</h3>
+
+      <div class="filter__group">
+        <label class="filter__label" for="f-maxprice">Giá tối đa (VND)</label>
+        <input id="f-maxprice" class="filter__input" type="number" min="0" step="500000" placeholder="VD: 3.000.000">
+      </div>
+
+      <div class="filter__group">
+        <label class="filter__label" for="f-guests">Số khách</label>
+        <input id="f-guests" class="filter__input" type="number" min="1" step="1" placeholder="VD: 2">
+      </div>
+
+      <div class="filter__group">
+        <label class="filter__label" for="f-type">Hạng phòng</label>
+        <select id="f-type" class="filter__select">
+          <option value="">Tất cả</option>
+          <option value="deluxe">Deluxe</option>
+          <option value="grand-deluxe">Grand Deluxe</option>
+          <option value="premier-quad">Premier Quad</option>
+          <option value="executive">Executive</option>
+          <option value="park-executive">Park View Executive</option>
+          <option value="executive-suite">Executive Suite</option>
+          <option value="presidential-suite">Presidential Suite</option>
+        </select>
+      </div>
+
+      <button id="f-reset" class="btn btn--primary filter__reset">Xóa lọc</button>
+    </aside>
+
+    <div class="results">
+      <h3 class="results__title">KẾT QUẢ LỌC ĐƯỢC</h3>
+      <div id="rooms-grid" class="results__grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <script src="../js/rooms.js"></script>
+</body>
+
+</html>

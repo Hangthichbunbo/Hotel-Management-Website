@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoi Global Hotel - Home</title>
+    <link rel="stylesheet" href="/staff/styles/style_home.css">
+    <script src="/staff/js/user_test.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="/staff/img/logo_big_size.png" alt="">
+        <div>
+            <h1 id="name"></h1>
+            <form action="login.html">
+                <button onclick="login()">Đăng xuất</button>
+            </form>
+
+        </div>
+    </header>
+    <nav>
+        <button data-section="room-status" onclick="showSection('room-status')">Trạng thái phòng</button>
+        <button data-section="room-booking" onclick="showSection('room-booking')">Đặt phòng</button>
+        <button data-section="service-confirm" onclick="showSection('service-confirm')">Dịch vụ</button>
+        <button data-section="booking-list" onclick="showSection('booking-list')">Danh sách đơn</button>
+
+    </nav>
+
+    <section id="room-status" class="hidden, room-status">
+        <div class="save">
+            <h2>Trạng thái phòng</h2>
+            <button onclick="saveData()">💾save</button>
+        </div>
+        <table id="sheet1">
+            <tr>
+                <td>201</td>
+                <td>Đang sử dụng</td>
+                <td><button onclick="handleClick(this, 'traPhong')">Trả phòng</button></td>
+                <td><button onclick="handleClick(this, 'donDep')">Dọn dẹp</button></td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Trống</td>
+                <td><button onclick="handleClick(this, 'traPhong')">Trả phòng</button></td>
+                <td><button onclick="handleClick(this, 'donDep')">Dọn dẹp</button></td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>Đang sử dụng</td>
+                <td><button onclick="handleClick(this, 'traPhong')">Trả phòng</button></td>
+                <td><button onclick="handleClick(this, 'donDep')">Dọn dẹp</button></td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>Đang bảo trì</td>
+                <td><button disabled>--</button></td>
+                <td><button onclick="handleClick(this, 'donDep')">Dọn dẹp</button></td>
+            </tr>
+            <tr>
+                <td>205</td>
+                <td>Trống</td>
+                <td><button onclick="handleClick(this, 'traPhong')">Trả phòng</button></td>
+                <td><button onclick="handleClick(this, 'donDep')">Dọn dẹp</button></td>
+            </tr>
+        </table>
+    </section>
+
+
+
+    <section id="room-booking" class="hidden, room-booking">
+        <div class="save">
+            <h2>Đặt phòng</h2>
+            <button onclick="saveData()">💾save</button>
+        </div>
+        <table id="sheet2">
+            <tr>
+                <th>Tên khách</th>
+                <th>Loại phòng</th>
+                <th>Ngày nhận</th>
+                <th>Ngày trả</th>
+                <th>Trạng thái</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>Phòng VIP</td>
+                <td>10-10-25</td>
+                <td>12-10-25</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>Phòng đơn</td>
+                <td>09-10-25</td>
+                <td>11-10-25</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Phạm Minh C</td>
+                <td>Phòng đôi</td>
+                <td>12-10-25</td>
+                <td>15-10-25</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Hoàng Lan D</td>
+                <td>Phòng VIP</td>
+                <td>13-10-25</td>
+                <td>16-10-25</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Vũ Anh E</td>
+                <td>Phòng đơn</td>
+                <td>11-10-25</td>
+                <td>13-10-25</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="service-confirm" class="hidden">
+        <div class="service-confirm">
+            <h2>Dịch vụ</h2>
+            <nav>
+                <button data-section="restaurant" onclick="showSection('restaurant')">Dịch vụ ăn uống</button>
+                <button data-section="spa" onclick="showSection('spa')">Dịch vụ Spa</button>
+                <button data-section="carService" onclick="showSection('carService')">Dịch vụ đưa đón</button>
+
+            </nav>
+        </div>
+
+    </section>
+
+    <section id="restaurant" class="hidden, restaurant">
+        <div class="save">
+            <h2>Ăn uống</h2>
+            <button onclick="saveData()">💾save</button>
+            <button data-section="service-confirm" onclick="showSection('service-confirm')"
+                style="margin: auto 20px auto 20px;">Back</button>
+        </div>
+        <table id="sheet3">
+            <tr>
+                <th>Tên khách</th>
+                <th>Loại bàn</th>
+                <th>Thời gian</th>
+                <th>Xác nhận</th>
+            </tr>
+            <tr>
+                <td>Lê Minh</td>
+                <td>Bàn đôi</td>
+                <td>18:30</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Phan Mai</td>
+                <td>Bàn gia đình</td>
+                <td>19:00</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Ngọc Quỳnh</td>
+                <td>Bàn VIP</td>
+                <td>20:00</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Hà Phong</td>
+                <td>Bàn 6 người</td>
+                <td>17:30</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="spa" class="hidden, spa">
+        <div class="save">
+            <h2>Spa</h2>
+            <button onclick="saveData()">💾save</button>
+            <button data-section="service-confirm" onclick="showSection('service-confirm')"
+                style="margin: auto 20px auto 20px;">Back</button>
+        </div>
+        <table id="sheet4">
+            <tr>
+                <th>Tên khách</th>
+                <th>Phòng Spa</th>
+                <th>Giờ hẹn</th>
+                <th>Trạng thái</th>
+            </tr>
+            <tr>
+                <td>Hoàng Yến</td>
+                <td>Spa Room 2</td>
+                <td>15:00</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Thu Trang</td>
+                <td>Spa Room 1</td>
+                <td>14:30</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Đỗ Linh</td>
+                <td>Spa Room 3</td>
+                <td>16:00</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+            <tr>
+                <td>Phương Anh</td>
+                <td>Spa VIP</td>
+                <td>17:00</td>
+                <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="carService" class="hidden, car-service">
+        <div class="save">
+            <h2>Spa</h2>
+            <button onclick="saveData()">💾save</button>
+            <button data-section="service-confirm" onclick="showSection('service-confirm')"
+                style="margin: auto 20px auto 20px;">Back</button>
+        </div>
+        <table id="sheet5">
+            <table>
+                <th>Tên khách</th>
+                <th>Địa điểm</th>
+                <th>Thời gian</th>
+                <th>Loại xe</th>
+                <th>Xác nhận</th>
+                </tr>
+                <tr>
+                    <td>Trần Quang</td>
+                    <td>Sân bay Nội Bài</td>
+                    <td>11:00</td>
+                    <td>Xe 7 chỗ</td>
+                    <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+                </tr>
+                <tr>
+                    <td>Ngô Hưng</td>
+                    <td>Nhà ga Hà Nội</td>
+                    <td>13:30</td>
+                    <td>Xe 4 chỗ</td>
+                    <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+                </tr>
+                <tr>
+                    <td>Vũ Dương</td>
+                    <td>Bến xe Giáp Bát</td>
+                    <td>09:00</td>
+                    <td>Xe 16 chỗ</td>
+                    <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Thảo</td>
+                    <td>Trung tâm hội nghị QG</td>
+                    <td>08:30</td>
+                    <td>Xe 12 chỗ</td>
+                    <td><button onclick="handleClick(this, '')">Xác nhận</button></td>
+                </tr>
+            </table>
+    </section>
+
+    <section id="booking-list" class="hidden">
+        <div class="save">
+            <h2>Đơn đặt phòng & dịch vụ</h2>
+        </div>
+        <table id="sheet6">
+            <tr>
+                <th>Loại dịch vụ</th>
+                <th>Tên khách</th>
+                <th>Thời gian</th>
+                <th>Trạng thái</th>
+            </tr>
+            <tr>
+                <td>Phòng</td>
+                <td>Nguyễn Văn A</td>
+                <td>10/10 → 12/10</td>
+                <td>Đang sử dụng</td>
+            </tr>
+            <tr>
+                <td>Ăn uống</td>
+                <td>Lê Minh</td>
+                <td>18:30</td>
+                <td>Đã xác nhận</td>
+            </tr>
+            <tr>
+                <td>Spa</td>
+                <td>Hoàng Yến</td>
+                <td>15:00</td>
+                <td>Chờ xác nhận</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&phone; Manager (+84)971****23</p>
+    </footer>
+
+</body>
+
+</html>
