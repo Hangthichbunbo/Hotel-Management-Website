@@ -21,6 +21,7 @@ html {
   font-weight: 600;
 }
 
+/* Nav */
 .header {
   background-color: #112d4e;
   position: fixed;
@@ -88,6 +89,7 @@ html {
   font-size: 20px;
   line-height: 90px;
 }
+/* Nav */
 
 .slider-container {
   margin-top: 90px;
@@ -269,6 +271,7 @@ html {
   margin: 10px 40px;
 }
 
+/* Footer */
 .footer {
   margin-top: auto;
   width: 100%;
@@ -311,7 +314,7 @@ html {
 }
 
 .footer-social-list .social-list-items {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .social-list-items a {
@@ -320,7 +323,9 @@ html {
   font-size: 20px;
   margin: 0 10px;
 }
+/* Footer */
 
+/* Nav */
 .mobile {
   position: fixed;
   top: 0;
@@ -373,21 +378,11 @@ html {
   color: #fff;
   font-size: 20px;
 }
+/* Nav */
 
 /* Tablet and Mobile */
 @media (max-width: 63.9375em) {
-  .intro .intro-text,
-  .intro .intro-img,
-  .about .about-text,
-  .about .about-img {
-    width: 100%;
-  }
-
-  .content .intro,
-  .content .about {
-    display: block;
-  }
-
+  /* Nav */
   .header .header-logo {
     margin-left: 8px;
     margin-right: 0px;
@@ -401,6 +396,19 @@ html {
   .header-book-room {
     margin: 0 16px;
   }
+  /* Nav */
+
+  .intro .intro-text,
+  .intro .intro-img,
+  .about .about-text,
+  .about .about-img {
+    width: 100%;
+  }
+
+  .content .intro,
+  .content .about {
+    display: block;
+  }
 
   .slider-text {
     left: 10%;
@@ -409,7 +417,7 @@ html {
   }
 
   .slider-text .slider-text-heading {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -419,6 +427,7 @@ html {
 
 /* Mobile */
 @media (max-width: 46.1875em) {
+  /* Nav */
   .header-menu {
     display: none;
   }
@@ -430,6 +439,7 @@ html {
   .header .mobile-menu-btn {
     display: block;
   }
+  /* Nav */
 
   .contact {
     display: block;
@@ -445,14 +455,17 @@ html {
     margin: 5px auto;
   }
 
+  /* Footer */
   .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+  /* Footer */
 }
 
+/* Animation mobile nav */
 @keyframes FadeIn {
   from {
     transform: translateX(140px);
@@ -464,3 +477,4 @@ html {
     opacity: 1;
   }
 }
+/* Animation mobile nav */
