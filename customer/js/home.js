@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   setInterval(autoScroll, 4000);
+
+  // Ẩn và hiện Mobile Menu
   const mobileBtn = document.querySelector(".js-menu-btn");
   const mobile = document.querySelector(".js-nav");
   const mobileContainer = document.querySelector(".js-nav-container");
