@@ -1,100 +1,132 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Phòng nghỉ & Tìm phòng</title>
-  <link href="/Fonts/themify-icons/themify-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="/customer/styles/room.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phòng nghỉ</title>
+  <link rel="stylesheet" href="../../Fonts/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="/styles/room.css">
+  <link rel="stylesheet" href="/styles/home.css">
 </head>
-
 <body>
-
+  
   <div class="header">
     <a href="home.html">
-      <div class="header__logo">
-        <img class="" src="/customer/images/logo.png" alt="" />
+      <div class="header-logo">
+        <img class="" src="../images/logo.png" alt="" />
       </div>
     </a>
 
-    <div class="header__menu">
-      <ul class="header__nav">
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="/customer/page/rooms.html">Phòng nghỉ</a></li>
-        <li><a href="/customer/page/Service.html">Tiện nghi & Dịch vụ</a></li>
+    <div class="header-menu">
+      <ul class="header-nav">
+        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="rooms.html">Phòng nghỉ</a></li>
+        <li><a href="Service.html">Tiện nghi & Dịch vụ</a></li>
       </ul>
-      <div class="header__book-room btn">
-        <a href="/customer/page/forms/book_a_room.html">Đặt phòng ngay</a>
+
+      <div class="header-book-room btn">
+        <a href="forms/book_a_room.html">Đặt phòng ngay</a>
+      </div>
+    </div>
+    <div class="mobile-menu-btn js-menu-btn">
+      <i class="menu-icon ti-menu"></i>
+    </div>
+  </div>
+
+  <section class="carousel" aria-label="Ảnh phòng khách sạn">
+    <div class="carousel__track" id="carousel-track">
+      <img src="/images/room_images/deluxe.webp" alt="Phòng 1" class="carousel__slide">
+      <img src="/images/room_images/executive-suite.webp" alt="Phòng 2" class="carousel__slide">
+      <img src="/images/room_images/executive.webp" alt="Phòng 3" class="carousel__slide">
+      <img src="/images/room_images/grand-deluxe.webp" alt="Phòng 4" class="carousel__slide">
+      <img src="/images/room_images/park-executive.webp" alt="Phòng 5" class="carousel__slide">
+      <img src="/images/room_images/premier-quad.webp" alt="Phòng 6" class="carousel__slide">
+    </div>
+    <button class="carousel__btn prev" id="prevBtn" aria-label="Ảnh trước">‹</button>
+    <button class="carousel__btn next" id="nextBtn" aria-label="Ảnh sau">›</button>
+    <div class="carousel__dots" id="carousel-dots"></div>
+  </section>
+
+  <section class="filter-bar">
+    <div class="container">
+      <form class="filter" onsubmit="return false">
+        <label class="filter__item">
+          <span class="filter__label">Số khách</span>
+          <select id="f-guests">
+            <option value="">Tất cả</option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+          </select>
+        </label>
+        <label class="filter__item">
+          <span class="filter__label">Loại phòng</span>
+          <select id="f-type">
+            <option value="">Tất cả</option>
+            <option value="phong-don">Phòng đơn</option>
+            <option value="phong-doi">Phòng đôi</option>
+          </select>
+        </label>
+        <label class="filter__item">
+          <span class="filter__label">Giá tối đa (VND)</span>
+          <input id="f-maxprice" type="number" min="0" placeholder="VD: 3000000">
+        </label>
+        <button id="f-reset" class="btn btn--outline filter__reset">Xóa lọc</button>
+      </form>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">Kết quả</h2>
+    <div id="rooms-grid" class="rooms-grid"></div>
+  </main>
+  
+  <div class="footer">
+    <div class="footer-img">
+      <img src="../images/logo2.png" alt="Logo Hotel" class="" />
+    </div>
+
+    <div class="footer-contact">
+      <p class="heading">Liên hệ</p>
+      <div class="footer-contact-items">
+        <p><i class="ti-location-pin"></i>Số 3 Cầu Giấy, Hà Nội.</p>
+        <p>
+          <i class="ti-mobile"></i>Phone:
+          <a href="tel:+00 151515">+84 123456789</a>
+        </p>
+        <p>
+          <i class="ti-email"></i>Email:
+          <a href="mailto:mail@mail.com">mail@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-social-list">
+      <p class="heading">Theo dõi chúng tôi</p>
+      <div class="social-list-items">
+        <a href=""><i class="ti-facebook"></i></a>
+        <a href=""><i class="ti-instagram"></i></a>
+        <a href=""><i class="ti-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mobile js-nav">
+    <div class="mobile-container js-nav-container">
+      <div class="mobile-body">
+        <ul class="mobile-nav">
+          <li><a href="home.html">Trang chủ</a></li>
+          <li><a href="rooms.html">Phòng nghỉ</a></li>
+          <li><a href="Service.html">Tiện nghi & dịch vụ</a></li>
+          <li><a href="forms/book_a_room.html">Đặt phòng</a></li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <main class="rooms-hero">
-    <section class="rooms-card" aria-labelledby="rooms-card-title">
-      <h2 id="rooms-card-title" class="rooms-card__title">PHÒNG NGHỈ</h2>
+  <script src="/js/room.js"></script>
+  <script src="/js/home.js"></script>
 
-      <p class="rooms-card__text">
-        Hanoi Global Hotel cung cấp 255 phòng nghỉ. Tất cả các phòng đều có tầm nhìn đẹp hướng ra thành phố hoặc công
-        viên Thống Nhất.
-      </p>
-      <p class="rooms-card__text">
-        Hanoi Global Hotel tự hào là khách sạn 5 sao đầu tiên có các tiện nghi chất lượng Nhật Bản như bồn vệ sinh tự
-        động hiện đại trang bị tại tất cả các phòng.
-      </p>
-      <p class="rooms-card__text">
-        Khách lưu trú tại phòng Executive và các hạng phòng cao hơn sẽ được tận hưởng dịch vụ tại Executive Lounge nằm
-        trên tầng cao nhất của khách sạn.
-      </p>
-      <p class="rooms-card__text">
-        Chúng tôi sẽ đảm bảo rằng bạn có một kỳ nghỉ thoải mái và dễ chịu nhất.
-      </p>
-
-      <button class="btn btn--primary rooms-card__btn">ĐẶT PHÒNG</button>
-    </section>
-  </main>
-
-  <div class="section-divider"></div>
-  <h2 class="search-title">TÌM PHÒNG</h2>
-
-  <section class="rooms" aria-label="Lọc phòng và kết quả">
-    <aside class="filter" aria-label="Yếu tố để lọc">
-      <h3 class="filter__title">YẾU TỐ ĐỂ LỌC</h3>
-
-      <div class="filter__group">
-        <label class="filter__label" for="f-maxprice">Giá tối đa (VND)</label>
-        <input id="f-maxprice" class="filter__input" type="number" min="0" step="500000" placeholder="VD: 3.000.000">
-      </div>
-
-      <div class="filter__group">
-        <label class="filter__label" for="f-guests">Số khách</label>
-        <input id="f-guests" class="filter__input" type="number" min="1" step="1" placeholder="VD: 2">
-      </div>
-
-      <div class="filter__group">
-        <label class="filter__label" for="f-type">Hạng phòng</label>
-        <select id="f-type" class="filter__select">
-          <option value="">Tất cả</option>
-          <option value="deluxe">Deluxe</option>
-          <option value="grand-deluxe">Grand Deluxe</option>
-          <option value="premier-quad">Premier Quad</option>
-          <option value="executive">Executive</option>
-          <option value="park-executive">Park View Executive</option>
-          <option value="executive-suite">Executive Suite</option>
-          <option value="presidential-suite">Presidential Suite</option>
-        </select>
-      </div>
-
-      <button id="f-reset" class="btn btn--primary filter__reset">Xóa lọc</button>
-    </aside>
-
-    <div class="results">
-      <h3 class="results__title">KẾT QUẢ LỌC ĐƯỢC</h3>
-      <div id="rooms-grid" class="results__grid" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <script src="../js/rooms.js"></script>
 </body>
-
 </html>
